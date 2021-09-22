@@ -5,6 +5,9 @@ const pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/gm
 const patternpsw = /^\w.{8,12}$/gm
 const psw = document.getElementById('password')
 const pswtext = document.getElementById('pswtext')
+const btn = document.getElementById('btn')
+const username = document.getElementById('username')
+
 
 function mailValidation(){
   const mailData = document.getElementById("email").value
@@ -30,3 +33,11 @@ function pswValidation(){
     pswtext.classList.add('invalid')
   }
 }
+
+btn.addEventListener("click", ()=>{
+  if(pswtext.classList=='valid' && text.classList== 'valid' && username.value != ""){
+    alert('All input filed is correct')
+  }else{
+    alert('Some input field is not correct')
+  }
+})
